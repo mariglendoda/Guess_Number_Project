@@ -1,5 +1,8 @@
-let secretNumber = Math.trunc(Math.random() * 20) + 1;
+let point = 20;
+let secretNumber = Math.trunc(Math.random() * point) + 1;
+const logicGuess = document.querySelector('.login-guess').textContent = `(Between 1 and ${point})`;
 let score = 20;
+let highscore = 0;
 console.log(`The secret number is (${secretNumber})`);
 
 document.querySelector('.check').addEventListener('click', function () {
@@ -15,6 +18,11 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('body').className = "correct";
     document.querySelector('.message').textContent = "🎉 Correct Number!"
     document.querySelector('.number').textContent = secretNumber;
+    
+    if (score > highscore) {
+      highscore = score;
+      document.querySelector('.highscore').textContent = highscore;
+    }
     
     // When guess to high
   } else if (guess > secretNumber) {
@@ -40,6 +48,7 @@ document.querySelector('.check').addEventListener('click', function () {
   }
 })
 
+// Implementing a game playing again functionality
 document.querySelector('.again-btn').addEventListener('click', function () {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
