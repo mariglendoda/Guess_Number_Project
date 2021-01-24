@@ -47,5 +47,17 @@ body {
 
 /* result */
 .results {
-  text-align: start;
+  text-align: center;
+}
+
+.again-btn {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
