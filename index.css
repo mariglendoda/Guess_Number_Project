@@ -9,8 +9,9 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
+  background: grey;
   color: white;
+  margin: auto;
 }
 
 .correct {
@@ -45,17 +46,21 @@ body {
   font-size: 100px;
 }
 
-/* result */
 .results {
-  text-align: center;
+  text-align: start;
 }
 
-.again-btn {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  width: 200px;
-  height: 40px;
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #555;
+  outline: none;
+}
+
+button {
+  text-transform: uppercase;
+  padding: 10px;
   border-radius: 10px;
   border: none;
   outline: none;
